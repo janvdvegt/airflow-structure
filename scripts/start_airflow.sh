@@ -6,7 +6,7 @@ docker run --name local-airflow-server \
            -d \
            -p 8080:8080 \
            -v $(pwd)/plugins/:/usr/local/airflow/plugins \
-           -v $(pwd)/requirements-airflow.txt:/requirements.txt \
+           -v $(pwd)/requirements/requirements-airflow.txt:/requirements.txt \
            -v $(pwd)/data/:/opt/data \
            -v $(pwd)/dags/:/usr/local/airflow/dags \
            puckel/docker-airflow webserver
